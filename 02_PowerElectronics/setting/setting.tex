@@ -1,0 +1,63 @@
+\documentclass[autodetect-engine,dvipdfmx-if-dvi,ja=standard]{bxjsarticle}
+
+\usepackage{graphicx}        % 図を表示するのに必要
+\usepackage{color}           % jpgなどを表示するのに必要
+\usepackage{amsmath,amssymb} % 数学記号を出すのに必要
+\usepackage{type1cm}         % fontsizeのエラー回避
+\usepackage{here}            % 図の強制配置
+\usepackage{url}             % URLをいい感じにしてくれる
+\usepackage{subfigure}       % 図をまとめて表示
+\usepackage{pdfpages}        % PDFの連結
+\usepackage{setspace}
+\usepackage{cases}
+\usepackage{fancyhdr}
+
+
+% 余白の設定
+% \setlength{\textheight}{\paperheight}   % 紙面縦幅を本文領域にする(BOTTOM=-TOP)
+% \setlength{\topmargin}{-15.4truemm}     % 上の余白を10mm(=1inch-15.4mm)に
+% \addtolength{\topmargin}{-\headheight}  %
+% \addtolength{\topmargin}{-\headsep}     % ヘッダの分だけ本文領域を移動させる
+% \addtolength{\textheight}{-20truemm}    % 下の余白も10mm
+% \setlength{\textwidth}{\paperwidth}     % 紙面横幅を本文領域にする(RIGHT=-LEFT)
+% \setlength{\oddsidemargin}{-5.4truemm}  % 奇数ページの左の余白を20mm(=1inch-5.4mm)に
+% \setlength{\evensidemargin}{-5.4truemm} % 偶数数ページの左の余白を20mm(=1inch-5.4mm)に
+% \addtolength{\textwidth}{-40truemm}     % 右の余白も20mm
+
+% タイトル
+\title{タイトル}
+
+% ヘッダとフッタの設定
+% \lhead{電気電子情報工学実験}
+% \chead{}
+% \rhead{20315784　佐藤凌雅}
+% \lfoot{}
+% \cfoot{\thepage} % ページ数
+% \rfoot{}
+
+\parindent = 0pt  % 行頭の字下げをしない
+\setstretch{1.0}  % 行間
+
+% キャプションの英語化
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\tablename}{Table}
+
+% 各章，節などタイトルの大きさを変更
+% \titleformat*{\section}{\Huge\bfseries}
+% \titleformat*{\subsection}{\Large\bfseries}
+
+% 式の番号を(senction_num.num)のようにする
+% \makeatletter
+% \@addtoreset{equation}{chapter}
+% \def\theequation{\thechapter.\arabic{equation}}
+% \makeatother
+
+% 呼び出したページのページ番号を消す
+\newcommand{\deletePageNum}{
+    \thispagestyle{empty}
+    \clearpage
+    \addtocounter{page}{-1}
+}
+
+% urlのフォントを直す
+\renewcommand\UrlFont{\rmfamily}
